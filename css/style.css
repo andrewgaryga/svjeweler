@@ -1,0 +1,315 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #2b2b2b;
+}
+
+/*header*/
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+    text-transform: uppercase;
+}
+
+.navbar {
+    border: none;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: rgba(24,188,156,1);
+    background-color: transparent;
+}
+
+hr.gradient {
+    background-color: #dcdbdb;
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #dcdbdb 50%, #ffffff 100%);
+    border: none;
+    height: 1px;
+    margin: 1.5em auto;
+    width: 50%;
+}
+hr.gradient-full {
+    width: 100%;
+}
+hr.gradient-footer {
+    width: 13%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*end header*/
+#portfolio img {
+
+}
+
+/*mixit*/
+.mix,
+.gap {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mix {
+/*    background: #fff;
+    border-top: .5rem solid currentColor;
+    border-radius: 2px;*/
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+/*.mix:before {
+    content: '';
+    display: inline-block;
+    padding-top: 56.25%;
+}*/
+
+.mix.green {
+    color: #91e6c7;
+}
+
+.mix.pink {
+    color: #d595aa;
+}
+
+.mix.blue {
+    color: #5ecdde;
+}
+
+/* Grid Breakpoints
+---------------------------------------------------------------------- */
+
+/* 2 Columns */
+
+.mix,
+.gap {
+    width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+}
+
+/* 3 Columns */
+
+@media screen and (min-width: 541px) {
+    .mix,
+    .gap {
+        width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+    }
+}
+
+/* 4 Columns */
+
+@media screen and (min-width: 961px) {
+    .mix,
+    .gap {
+        width: calc(100%/4 - (((4 - 1) * 1rem) / 4));
+    }
+}
+
+/* 5 Columns */
+
+/*mixitup control*/
+.btn.mixitup-control-active {
+    background-color: white;
+    font-weight: bold;
+}
+.btn {
+    background-color: #f7f7f7;
+    color: #2b2b2b;
+    display: inline-block;
+    font-size: 14px;
+    height: 32px;
+    padding: 3px 16px;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-transition: background-color 0.4s ease-out, font-weight 0.7s ease-in-out;
+    -moz-transition: background-color 0.4s ease-out, font-weight 0.7s ease-in-out;
+    -o-transition: background-color 0.4s ease-out, font-weight 0.7s ease-in-out;
+    transition: background-color 0.4s ease-out, font-weight 0.7s ease-in-out;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+/*MIXITUP END*/
+
+
+/*portfolio hover effect*/
+#portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 3px;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /*green*/
+    /*background: rgba(24,188,156,.9);*/
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    margin-left: -35px;
+    text-align: right;
+    font-size: 16px;
+    color: #2b2b2b;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+    margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content p.caption-header::before {
+    content: '\f054';
+    color: rgba(24,188,156,1);;
+    font-family: 'FontAwesome';
+    font-size: 13px;
+    position: absolute;
+    right: -23px;
+    top: 4px;
+}
+#portfolio .portfolio-item .portfolio-link .caption .caption-content p {
+    /*color: #a7a7a7;*/
+    margin-bottom: 0;
+}
+#portfolio .portfolio-item .portfolio-link .caption .caption-content p.caption-sub {
+    /*color: #7a7a7a;*/
+    color: #7a7a7acc;
+    font-size: 13px;
+    /*font-style: italic;*/
+
+}
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+    margin: 0;
+    color: #000;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
+/*portfolio responsive*/ 
+.img-portfolio-responsive {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+}
+
+
+
+/*ABOUT*/
+section#about {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+img.about-pic {
+    float: left;
+}
+.about-text {
+    line-height: 2.8;
+}
+/*ABOUT END*/
+
+/*CONTACT*/
+.form-control {
+    border-radius: 0;
+} 
+.form-control:hover {
+    border-color: #2b2b2b;
+    -webkit-transition: border-color 0.5s ease-in-out;
+    -moz-transition: border-color 0.5s ease-in-out;
+    -o-transition: border-color 0.5s ease-in-out;
+    transition: border-color 0.5s ease-in-out;
+} 
+.form-control:focus {
+    border-color: #2b2b2b;
+    color: #2b2b2b;
+    -webkit-transition: color 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+} 
+.btn-form {
+    width: 100%;
+    border-radius: 0;
+    border-color: #2b2b2b;
+    color: #2b2b2b;
+    background-color: transparent;
+    height: 34px;
+}
+
+.btn-form:hover {
+    color: #fff;
+    background-color: #2b2b2b;
+    -webkit-transition: background-color 0.4s ease-out, color 0.5s ease-in-out;
+    -moz-transition: background-color 0.4s ease-out, color 0.5s ease-in-out;
+    -o-transition: background-color 0.4s ease-out, color 0.5s ease-in-out;
+    transition: background-color 0.4s ease-out, color 0.5s ease-in-out;
+}
+p.form-text {
+    line-height: 2.8;
+}
+form {
+    margin-top: 20px
+}
+/*CONTACT END*/
+/*footer*/
+.footer-name {
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+i.footer-icon {
+    background-color: black;
+    padding: 5px;
+    color: #fff;
+    font-size: 21px;
+    margin: 0 3px;
+}
+
+i.footer-icon:hover {
+    background-color: white;
+    color: #000;
+    -webkit-transition: background-color 0.4s ease-out, color 0.5s ease-in-out;
+    -moz-transition: background-color 0.4s ease-out, color 0.5s ease-in-out;
+    -o-transition: background-color 0.4s ease-out, color 0.5s ease-in-out;
+    transition: background-color 0.4s ease-out, color 0.5s ease-in-out;
+}
+
+.footer-name a {
+    color: #2b2b2b;
+}
+
